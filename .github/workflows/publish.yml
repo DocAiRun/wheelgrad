@@ -28,8 +28,3 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: twine upload dist/*
-```
-
-**4.** En bas → message de commit :
-```
-Add PyPI publish workflow
