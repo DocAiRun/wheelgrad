@@ -1,4 +1,5 @@
-name: Publish to PyPI
+- name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
 
 on:
   release:
@@ -7,8 +8,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    environment: pypi
+    permissions:
+      id-token: write
 
       - name: Set up Python
         uses: actions/setup-python@v5
